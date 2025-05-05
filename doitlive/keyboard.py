@@ -124,7 +124,7 @@ def run_command(
                     output = subprocess.check_output([shell, fp.name])
                     echo(output)
                 else:
-                    return subprocess.call([shell, fp.name])
+                    return subprocess.call([shell, "-x", fp.name])
             except KeyboardInterrupt:
                 pass
 
